@@ -1,9 +1,244 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+$fnt-wght-thin: 100;
+$fnt-wght-light: 300;
+$fnt-wght-regular: 500;
+$fnt-wght-bold: 700;
+$fnt-wght-black: 900;
+$font-stack: 'Roboto',
+sans-serif;
+$font-plyfair: 'Playfair Display',
+sans-serif;
+$aqua-colour: #00e0d0;
+$overlay-color: #0b0051;
+$font-colour:#413d4b;
+@mixin button {
+    color: #00e0d0;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid $aqua-colour;
+    font-family: 'Hammersmith One', sans-serif;
+    border-radius: 3px;
+    &:hover {
+        text-decoration: none;
+        color: $aqua-colour;
+        background-color: rgba($color: #fff, $alpha: 0.5)
+    }
+}
 
-body {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 100% $font-stack;
+    color: #fff;
+}
+
+header {
+    background-image: url("../img/header-background.png");
+    position: relative;
+    .navigation {
+        padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        .logo {
+            width: 30%;
+            float: left;
+        }
+        nav {
+            float: right;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: $fnt-wght-black;
+        }
+        ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .main {
+        padding-top: 80px;
+        width: 100%;
+        text-align: center;
+        span.line {
+            width: 50px;
+            height: 1px;
+            background: $aqua-colour;
+            display: inline-block;
+            margin: 20px auto;
+        }
+        a {
+            margin: 50px auto;
+            @include button;
+        }
+    }
+}
+
+#story {
+    padding: 70px 0;
+    .bigLogo {
+        text-align: center;
+    }
+    .ourStory-info {
+        h3 {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #413d4b;
+            font-family: $font-plyfair;
+        }
+        p {
+            margin-bottom: 25px;
+            font-weight: $fnt-wght-light;
+            color: #413d4b;
+        }
+        a {
+            @include button;
+        }
+    }
+}
+
+.video {
+    video {
+        width: 100%;
+    }
+}
+
+#expertise {
+    text-align: center;
+    padding: 70px 0;
+    .expertiseHeading {
+        font-family: $font-plyfair;
+    }
+    h2,
+    h5 {
+        color: $font-colour;
+    }
+    p {
+        color: $font-colour;
+    }
+    span.line {
+        width: 50px;
+        height: 1px;
+        background: $font-colour;
+        display: inline-block;
+        margin: 20px auto 40px;
+    }
+    .expertiseBlock {
+        border-right: 1px solid $font-colour;
+        img {
+            height: 50px;
+            margin: 30px 0;
+        }
+        p {
+            margin-bottom: 35px;
+        }
+    }
+    .expertiseBlock:nth-child(3) {
+        border-right: 0;
+    }
+    .botoomBorder {
+        border-bottom: 1px solid $font-colour;
+    }
+}
+
+#ourTeam {
+    background-image: url("../img/teamBackGround.png");
+    background-size: cover;
+    text-align: center;
+    padding: 70px 0;
+    .teamHeading {
+        font-family: $font-plyfair;
+    }
+    span.line {
+        width: 50px;
+        height: 1px;
+        background: white;
+        display: inline-block;
+        margin: 20px auto;
+    }
+    .teamMember img {
+        width: 100%;
+    }
+    figcaption {
+        border: 1px solid white;
+        padding: 20px 0;
+    }
+    .joinUs {
+        padding: 70px 0 30px;
+    }
+    .row {
+        padding-bottom: 70px;
+    }
+    a {
+        @include button;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+.ourWorks {
+    .teamHeading{
+        padding: 70px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            color: $font-colour;
+            font-family: $font-plyfair;
+        }  
+        p{
+            color: $font-colour;
+        }
+    }
+    .projects {
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            .row {
+                width: 100%;
+                img {
+                    width: calc(100%/6);
+                }
+            }
+        }
+    }
+    .button{
+        @include button();
+        margin: 70px auto;
+    }
+}
+
+.peoplesQuotes{
+    .quoteSign{
+        content: "\f10d";
+    }
+    p{
+        color: $font-colour;
+    }
+    h5{
+        color: $font-colour;
+    }
 
 }
+
+footer {}
 
 @import "media";
