@@ -8,11 +8,13 @@ $fnt-wght-bold: 700;
 $fnt-wght-black: 900;
 $font-stack: 'Roboto',
 sans-serif;
-$font-plyfair: 'Playfair Display',
+$font-playfair: 'Playfair Display',
+sans-serif;
+$font-hammersmit: 'HammersmithOne',
 sans-serif;
 $aqua-colour: #00e0d0;
 $overlay-color: #0b0051;
-$font-colour:#413d4b;
+$font-colour:rgb(65, 61, 75);
 @mixin button {
     color: #00e0d0;
     text-transform: uppercase;
@@ -24,29 +26,95 @@ $font-colour:#413d4b;
     border: 1px solid $aqua-colour;
     font-family: 'Hammersmith One', sans-serif;
     border-radius: 3px;
-    &:hover {
-        text-decoration: none;
-        color: $aqua-colour;
-        background-color: rgba($color: #fff, $alpha: 0.5)
+}
+
+@mixin elements-colour($el-colour) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+    ul,
+    li,
+    p {
+        color: $el-colour;
     }
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
+@mixin background($url) {
+    background: linear-gradient(to right, rgba(9, 5, 47, .85), rgba(49, 29, 94, .85)), url($url);
+}
+
+@mixin h1 {
     margin: 0;
     padding: 0;
-    font-family: 100% $font-stack;
+    font-family: $font-playfair;
+    font-weight: $fnt-wght-black;
+}
+
+@mixin h2 {
+    font-family: $font-playfair;
+    font-weight: $fnt-wght-bold;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin h4 {
+    font-size: 14px;
+    font-family: $font-stack;
+    font-weight: $fnt-wght-black;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin h5 {
+    font-family: $font-playfair;
+    opacity: 0.749;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin p {
+    font-size: 14px;
+    font-weight: $fnt-wght-light;
+    font-family: $font-stack;
+    color: #00e0d0;
+    padding: 0;
+    margin: 0;
+    opacity: 0.749;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    h1 {
+        @include h1;
+    }
+    h2 {
+        @include h2;
+    }
+    h4 {
+        @include h4;
+    }
+    h5 {
+        @include h5;
+    }
+    p {
+        @include p;
+    }
+}
+
+a,
+a:hover {
+    text-decoration: none;
     color: #fff;
 }
 
 header {
-    background-image: url("../img/header-background.png");
-    position: relative;
+    @include background("../img/header-background.png");
     .navigation {
         padding: 15px 0;
         display: flex;
@@ -56,13 +124,12 @@ header {
         .logo {
             width: 30%;
             float: left;
-        }
-        nav {
-            float: right;
-            text-transform: uppercase;
-            font-size: 13px;
-            font-weight: $fnt-wght-black;
-        }
+        } // nav {
+        //     float: right;
+        //     text-transform: uppercase;
+        //     font-size: 13px;
+        //     font-weight: $fnt-wght-black;
+        // }
         ul {
             width: 100%;
             list-style: none;
@@ -71,22 +138,27 @@ header {
             justify-content: space-between;
         }
     }
-    .main {
-        padding-top: 80px;
+    .carousel {
         width: 100%;
-        text-align: center;
-        span.line {
-            width: 50px;
-            height: 1px;
-            background: $aqua-colour;
-            display: inline-block;
-            margin: 20px auto;
-        }
-        a {
-            margin: 50px auto;
-            @include button;
+        margin: 0 auto;
+        .main {
+            padding-top: 80px;
+            width: 100%;
+            text-align: center;
+            span.line {
+                width: 50px;
+                height: 1px;
+                background: $aqua-colour;
+                display: inline-block;
+                margin: 20px auto;
+            }
+            a {
+                margin: 50px auto 200px;
+                @include button;
+            }
         }
     }
+    @include elements-colour(#fff);
 }
 
 #story {
@@ -95,22 +167,15 @@ header {
         text-align: center;
     }
     .ourStory-info {
-        h3 {
-            font-size: 22px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            color: #413d4b;
-            font-family: $font-plyfair;
-        }
+        h2,
         p {
-            margin-bottom: 25px;
-            font-weight: $fnt-wght-light;
-            color: #413d4b;
+            margin-bottom: 30px;
         }
         a {
             @include button;
         }
     }
+    @include elements-colour($font-colour);
 }
 
 .video {
@@ -122,31 +187,29 @@ header {
 #expertise {
     text-align: center;
     padding: 70px 0;
-    .expertiseHeading {
-        font-family: $font-plyfair;
-    }
-    h2,
-    h5 {
-        color: $font-colour;
-    }
-    p {
-        color: $font-colour;
+    h2 {
+        padding-bottom: 15px;
     }
     span.line {
         width: 50px;
         height: 1px;
         background: $font-colour;
         display: inline-block;
-        margin: 20px auto 40px;
+        margin: 40px auto 40px;
     }
     .expertiseBlock {
         border-right: 1px solid $font-colour;
         img {
             height: 50px;
+            width: 50px;
             margin: 30px 0;
         }
         p {
-            margin-bottom: 35px;
+            margin: 0 auto 35px;
+            width: 70%;
+        }
+        h4 {
+            margin-bottom: 25px;
         }
     }
     .expertiseBlock:nth-child(3) {
@@ -155,29 +218,38 @@ header {
     .botoomBorder {
         border-bottom: 1px solid $font-colour;
     }
+    @include elements-colour($font-colour);
 }
 
 #ourTeam {
-    background-image: url("../img/teamBackGround.png");
+    @include background("../img/teamBackGround.png");
     background-size: cover;
     text-align: center;
     padding: 70px 0;
-    .teamHeading {
-        font-family: $font-plyfair;
+    h2 {
+        padding-bottom: 10px;
     }
     span.line {
         width: 50px;
         height: 1px;
         background: white;
         display: inline-block;
-        margin: 20px auto;
+        margin: 15px auto 45px;
     }
-    .teamMember img {
-        width: 100%;
-    }
-    figcaption {
-        border: 1px solid white;
-        padding: 20px 0;
+    .teamMember {
+        h4 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 13px;
+        }
+        img {
+            width: 100%;
+        }
+        figcaption {
+            border: 1px solid white;
+            padding: 20px 0;
+        }
     }
     .joinUs {
         padding: 70px 0 30px;
@@ -190,21 +262,16 @@ header {
         margin: 0 auto;
         margin-top: 30px;
     }
+    @include elements-colour(#fff);
 }
 
-.ourWorks {
-    .teamHeading{
-        padding: 70px 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        h2{
-            color: $font-colour;
-            font-family: $font-plyfair;
-        }  
-        p{
-            color: $font-colour;
+#ourWorks {
+    padding: 70px 0;
+    .titleOurWorks {
+        margin: 0 auto 70px;
+        a {
+            display: flex;
+            align-items: center;
         }
     }
     .projects {
@@ -220,25 +287,174 @@ header {
             }
         }
     }
-    .button{
-        @include button();
-        margin: 70px auto;
+    .button {
+        @include button;
+        margin: 70px auto 0;
+    }
+    @include elements-colour($font-colour);
+}
+
+#peoplesQuotes {
+    @include background("../img/peoplesQuotes.png");
+    .quoteSign {
+        font-size: 80px;
+        color: #fff;
+        font-family: $font-playfair;
+        height: 60px;
+    }
+    background-size: cover;
+    text-align: center;
+    .carousel {
+        width: 100%;
+        margin: 0 auto;
+        .row {
+            width: 100%;
+            .quoteText {
+                font-size: 16px;
+                font-weight: 400;
+                margin: 0px auto 50px;
+            }
+        }
+        h4 {
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 13px;
+        }
+        .qtSecBtmMrgn {
+            margin: 0 auto 185px;
+        }
+    }
+    @include elements-colour(#fff);
+}
+
+#contactUs {
+    h2 {
+        padding-bottom: 35px;
+    }
+    padding: 70px 0;
+    .contactForm {
+        width: 100%;
+        input {
+            width: 100%;
+            margin-bottom: 25px;
+            padding: 10px;
+        }
+        textarea {
+            width: 100%;
+            margin-bottom: 25px;
+            padding: 10px;
+            height: 200px;
+        }
+        button {
+            @include button();
+            background-color: #fff;
+            margin-bottom: 70px;
+        }
+    }
+    .ourClients {
+        div {
+            height: 90px;
+            display: flex;
+            align-items: flex-start;
+        }
     }
 }
 
-.peoplesQuotes{
-    .quoteSign{
-        content: "\f10d";
+footer {
+    @include background("../img/footerBackground.png");
+    background-size: cover;
+    .col-md-4 {
+        p {
+            line-height: 2.0;
+        }
+        h4 {
+            height: 55px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
     }
-    p{
-        color: $font-colour;
+    .row:first-child {
+        padding-top: 70px;
     }
-    h5{
-        color: $font-colour;
+    .row:last-child {
+        padding-bottom: 70px;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
-
+    .logo {
+        padding-bottom: 20px;
+    }
+    .ourAddress {
+        padding-bottom: 20px;
+    }
+    .ourAddress,
+    .ourPhone {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        img {
+            height: 19px;
+        }
+    }
+    .subsToNews {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        input {
+            width: 70%;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid #fff;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            background-color: rgba(#fff, .6);
+            margin-left: 10px;
+        }
+    }
+    .ourSocial {
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+            img {
+                height: 50%;
+            }
+        }
+    }
+    .terms {
+        ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            text-align: left;
+            li {
+                @include h4;
+                list-style-type: none;
+                margin-right: 30px;
+            }
+        }
+    }
+    .copyright h4 {
+        text-align: right;
+    }
+    @include elements-colour(#fff);
 }
-
-footer {}
 
 @import "media";

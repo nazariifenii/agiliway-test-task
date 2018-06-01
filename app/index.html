@@ -23,6 +23,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
     <link rel="stylesheet" href="css/main.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -36,25 +40,90 @@
                     </div>
                     <nav class="navigation col-md-7">
                         <ul class="row">
-                            <li>home</li>
-                            <li>about</li>
-                            <li>expertise</li>
-                            <li>teams</li>
-                            <li>works</li>
-                            <li>people say</li>
-                            <li>contact</li>
+                            <li>
+                                <a href="#">home</a>
+                            </li>
+                            <li>
+                                <a href="#story">about</a>
+                            </li>
+                            <li>
+                                <a href="#expertise">expertise</a>
+                            </li>
+                            <li>
+                                <a href="#ourTeam">teams</a>
+                            </li>
+                            <li>
+                                <a href="#ourWorks">works</a>
+                            </li>
+                            <li>
+                                <a href="#peoplesQuotes">people say</a>
+                            </li>
+                            <li>
+                                <a href="#contactUs">contact</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="main">
-                    <h2>We Are Awesome Creative Agency</h2>
-                    <span class="line"></span>
-                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                        lorem
-                        <br>quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
-                        amet nibh
-                        <br> vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-                    <a href="#">Learn more</a>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="main">
+                                <h1>We Are Awesome Creative Agency</h1>
+                                <span class="line"></span>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                                    Aenean sollicitudin, lorem
+                                    <br>quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh
+                                    <br> vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="main">
+                                <h1>We Are Awesome Creative Agency</h1>
+                                <span class="line"></span>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                                    Aenean sollicitudin, lorem
+                                    <br>quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh
+                                    <br> vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="main">
+                                <h1>We Are Awesome Creative Agency</h1>
+                                <span class="line"></span>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                                    Aenean sollicitudin, lorem
+                                    <br>quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh
+                                    <br> vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="main">
+                                <h1>We Are Awesome Creative Agency</h1>
+                                <span class="line"></span>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                                    Aenean sollicitudin, lorem
+                                    <br>quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                    sed odio sit amet nibh
+                                    <br> vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +135,7 @@
                     <img src="img/bigLogo.png" alt="Logo">
                 </div>
                 <div class="ourStory-info col-md-7">
-                    <h3>Our story</h3>
+                    <h2>OUR STORY</h2>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
                         lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
                         sit amet nibh vulputate cursus</p>
@@ -91,40 +160,40 @@
         <div class="container">
             <div class="expertiseHeading">
                 <h2>EXPERTISE</h2>
-                <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+                <h5>Lorem ipsum dolor sit amet proin gravida nibh vel velit</h5>
                 <span class="line"></span>
             </div>
             <div class="row">
                 <div class="expertiseBlock col-md-4 botoomBorder">
                     <img src="img/designExpertise.svg" alt="">
-                    <h5>WEB DESIGN & DEVELOPMENT</h5>
+                    <h4>WEB DESIGN & DEVELOPMENT</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 botoomBorder">
                     <img src="img/brandingIdentity.svg" alt="">
-                    <h5>BRANDING IDENTITY</h5>
+                    <h4>BRANDING IDENTITY</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 botoomBorder">
                     <img src="img/mobileIdentity.svg" alt="">
-                    <h5>MOBILE APP</h5>
+                    <h4>MOBILE APP</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="expertiseBlock col-md-4 noBotoomBorder">
-                    <img src="img/optomization.svg" alt="">
-                    <h5>SEARCH ENGINE OPTIMIZATION</h5>
+                    <img src="img/optimization.svg" alt="">
+                    <h4>SEARCH ENGINE OPTIMIZATION</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 noBotoomBorder">
                     <img src="img/gameDevelopment.svg" alt="">
-                    <h5>GAME DEVELOPMENT</h5>
+                    <h4>GAME DEVELOPMENT</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 noBotoomBorder">
                     <img src="img/withLove.svg" alt="">
-                    <h5>MADE WITH LOVE</h5>
+                    <h4>MADE WITH LOVE</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
             </div>
@@ -143,28 +212,28 @@
                 <figure class="teamMember col-md-3">
                     <img src="img/teamMember.png" alt="">
                     <figcaption>
-                        <h5>SEMF UCUK</h5>
+                        <h4>SEMF UCUK</h4>
                         <p>CEO & FOUNDER</p>
                     </figcaption>
                 </figure>
                 <figure class="teamMember col-md-3">
                     <img src="img/teamMember.png" alt="">
                     <figcaption>
-                        <h5>DIK ADALIN</h5>
+                        <h4>DIK ADALIN</h4>
                         <p>ENGINEERING</p>
                     </figcaption>
                 </figure>
                 <figure class="teamMember col-md-3">
                     <img src="img/teamMember.png" alt="">
                     <figcaption>
-                        <h5>JENG KOL</h5>
+                        <h4>JENG KOL</h4>
                         <p>DESIGNER</p>
                     </figcaption>
                 </figure>
                 <figure class="teamMember col-md-3">
                     <img src="img/teamMember.png" alt="">
                     <figcaption>
-                        <h5>PET ROMAK</h5>
+                        <h4>PET ROMAK</h4>
                         <p>MARKETING</p>
                     </figcaption>
                 </figure>
@@ -174,11 +243,11 @@
         </div>
     </section>
 
-    <section class="ourWorks">
+    <section id="ourWorks">
         <div class="container">
-            <div class="row teamHeading">
-                <h2>OUR WORKS</h2>
-                <a href="#">
+            <div class="row  titleOurWorks">
+                <h2 class="col-md-6 justify-content-start">OUR WORKS</h2>
+                <a href="#" class="col-md-6 justify-content-end">
                     <p>See all projects in dribble ></p>
                 </a>
             </div>
@@ -207,19 +276,213 @@
         <a class="button" href="#">Load More</a>
     </section>
 
-    <section class="peoplesQuotes">
-        <span class="quote">&#8220;</span>
-        <p>
-            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-            bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-            cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed
-            non mauris vitae erat consequat auctor eu in elit.
-        </p>
-        <h5>JANE GALADRIEL</h5>
-        <span>CEO TENGKUREP</span>
+    <section id="peoplesQuotes">
+        <span class="quoteSign">&#8220;</span>
+        <div id="quotesCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#quotesCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#quotesCarousel" data-slide-to="1"></li>
+                <li data-target="#quotesCarousel" data-slide-to="2"></li>
+                <li data-target="#quotesCarousel" data-slide-to="3"></li>
+                <li data-target="#quotesCarousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <p class="quoteText col-md-10">
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
+                                sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
+                                a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                        </div>
+                        <h4>JANE GALADRIEL</h4>
+                        <p class="qtSecBtmMrgn">CEO TENGKUREP</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <div class="row">
+                            <p class="quoteText col-md-10">
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
+                                sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
+                                a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                        </div>
+                        <h4>JANE GALADRIEL</h4>
+                        <p class="qtSecBtmMrgn">CEO TENGKUREP</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+                        <div class="row">
+                            <p class="quoteText col-md-10">
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
+                                sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
+                                a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                        </div>
+                        <h4>JANE GALADRIEL</h4>
+                        <p class="qtSecBtmMrgn">CEO TENGKUREP</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <div class="row">
+                            <p class="quoteText col-md-10">
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
+                                sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
+                                a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                        </div>
+                        <h4>JANE GALADRIEL</h4>
+                        <p class="qtSecBtmMrgn">CEO TENGKUREP</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <div class="row">
+                            <p class="quoteText col-md-10">
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
+                                sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
+                                a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                        </div>
+                        <h4>JANE GALADRIEL</h4>
+                        <p class="qtSecBtmMrgn">CEO TENGKUREP</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <div class="row">
+                            <p class="quoteText col-md-10">
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
+                                sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
+                                a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                        </div>
+                        <h4>JANE GALADRIEL</h4>
+                        <p class="qtSecBtmMrgn">CEO TENGKUREP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer></footer>
+    <section id="contactUs">
+        <div class="container">
+            <div class="row">
+                <div class="contactForm col-md-6">
+                    <h2>GIVE US A GOOD NEWS</h2>
+                    <form action="#">
+                        <input type="text" name="Name" placeholder="Name">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="Subject" placeholder="Subject">
+                        <textarea placeholder="Your Massage"></textarea>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="ourClients col-md-6">
+                    <h2>OUR HAPPY CLIENT</h2>
+                    <div class="row">
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/zaraLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/barneysNewYorkLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/calvinkleinLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/converseLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/levisLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/mangoLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/gucciLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/nikeLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/pumaLogo.png" alt="">
+                        </div>
+                        <div class="col-md-6 clientLogo">
+                            <img src="img/billabongLogo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <img src="img/Vector Smart Object.png" alt="tajam logo">
+                        <img src="img/tajam.png" alt="tajam">
+                    </div>
+                    <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit
+                        amet auctror a ornare odio non mauris vitae erat in elit</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="align-content-center">OUR STUDIO</h4>
+                    <div class="ourAddress">
+                        <img src="img/geo.png" alt="">
+                        <p>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
+                    </div>
+                    <div class="ourPhone">
+                        <img src="img/phoneNumber.png" alt="">
+                        <p>(+62) 21-2224 3333</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>STAY IN TOUCH</h4>
+                    <div class="subsToNews">
+                        <input type="email" placeholder="Subscribe our newsletter">
+                        <a href="#"><img src="img/socials/paperLogo.png" alt=""></a>
+                    </div>
+                    <div class="ourSocial">
+                        <a href=""><img src="img/socials/facebookLogo.png" alt=""></a>
+                        <a href=""><img src="img/socials/twitterLogo.png" alt=""></a>
+                        <a href=""><img src="img/socials/dribbbleLogo.png" alt=""></a>
+                        <a href=""><img src="img/socials/instagramLogo.png" alt=""></a>
+                        <a href=""><img src="img/socials/googleLogo.png" alt=""></a>
+                        <a href=""><img src="img/socials/youtubeLogo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="terms col-md-6 justify-content-end">
+                    <ul>
+                        <li>HELP</li>
+                        <li>TERMS & CONDITION</li>
+                        <li>PRIVACY</li>
+                    </ul>
+                </div>
+                <div class="copyright col-md-6">
+                    <h4>Copyright © 2015 - Tajem Creative</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="js/scripts.min.js"></script>
 </body>
 
