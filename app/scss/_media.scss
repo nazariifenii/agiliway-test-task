@@ -1,5 +1,6 @@
 @import "vars";
 /*==========  Desktop First  ==========*/
+
 $aqua-colour: #00e0d0;
 $overlay-color: #0b0051;
 $font-colour:rgb(65, 61, 75);
@@ -12,14 +13,12 @@ $font-colour:rgb(65, 61, 75);
 // ≥768px
 @include media-breakpoint-down(sm) {
     header {
-        .navigation{
+        .navigation {
             padding: 0;
         }
-
-        .topnav{
+        .topnav {
             width: 100%;
             margin-top: 0;
-            
         }
         .topnav a {
             transition: 0ms;
@@ -66,12 +65,12 @@ $font-colour:rgb(65, 61, 75);
             margin-right: 0;
         }
         .topnav.responsive a:nth-child(1) {
-            background-color:$overlay-color ;
+            background-color: $overlay-color;
             color: #fff;
             padding: 20px 16px;
         }
         .topnav.responsive a:nth-child(2) {
-           display: none;
+            display: none;
         }
         .topnav.responsive .dropdown {
             float: none;
@@ -84,11 +83,11 @@ $font-colour:rgb(65, 61, 75);
             width: 100%;
             text-align: left;
         }
-        .logo{
+        .logo {
             display: none;
         }
-        .carousel-inner{
-            p{
+        .carousel-inner {
+            p {
                 width: 90%;
                 margin: 0 auto;
             }
@@ -149,8 +148,8 @@ $font-colour:rgb(65, 61, 75);
             }
         }
     }
-    #peoplesQuotes{
-        .row{
+    #peoplesQuotes {
+        .row {
             margin: 0 auto;
         }
     }
@@ -160,7 +159,7 @@ $font-colour:rgb(65, 61, 75);
         }
         ul {
             justify-content: space-around;
-            li{
+            li {
                 margin: 0;
             }
         }

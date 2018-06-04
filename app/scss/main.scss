@@ -123,7 +123,6 @@ header {
             width: 30%;
             float: left;
         }
-        
     }
     .topnav {
         width: 60%;
@@ -293,8 +292,8 @@ header {
         margin-top: 30px;
         text-decoration: none;
         &:hover {
-            background-color:#fff;
-            color:$aqua-colour ;
+            background-color: #fff;
+            color: $aqua-colour;
         }
     }
     @include elements-colour(#fff);
@@ -392,7 +391,7 @@ header {
             margin-bottom: 70px;
             text-decoration: none;
             &:hover {
-                background-color:  $aqua-colour;
+                background-color: $aqua-colour;
                 color: #fff;
             }
         }
@@ -403,7 +402,6 @@ header {
             display: flex;
             align-items: flex-start;
         }
-       
     }
 }
 
@@ -484,7 +482,7 @@ footer {
                 height: 50%;
             }
             &:hover {
-                background-color:  $aqua-colour;
+                background-color: $aqua-colour;
             }
         }
     }
@@ -498,11 +496,11 @@ footer {
                 @include h4;
                 list-style-type: none;
                 margin-right: 30px;
-                a{
+                a {
                     color: #fff;
                     text-decoration: none;
                     &:hover {
-                        color:  $aqua-colour;
+                        color: $aqua-colour;
                     }
                 }
             }
