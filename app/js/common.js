@@ -1,3 +1,4 @@
+/*Function for smoothscroll*/
 var $root = $('html, body');
 
 $('a[href^="#"]').click(function () {
@@ -7,3 +8,13 @@ $('a[href^="#"]').click(function () {
 
     return false;
 });
+
+/*Function for navigation menu*/
+function dropDownMenu() {
+    var x = document.getElementById("tajamTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}

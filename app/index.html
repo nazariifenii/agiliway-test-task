@@ -23,48 +23,36 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
     <link rel="stylesheet" href="css/main.min.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/wow/css/libs/animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <header class="">
+    <header>
         <div class="container">
             <div class="row">
-                <div class="navigation col-md-12">
+                <div class="navigation col-md-12 d-flex justify-content-between">
                     <div class="logo">
                         <img src="img/Vector Smart Object.png" alt="tajam logo">
                         <img src="img/tajam.png" alt="tajam">
                     </div>
-                    <nav class="navigation col-md-7">
-                        <ul class="row">
-                            <li>
-                                <a href="#">home</a>
-                            </li>
-                            <li>
-                                <a href="#story">about</a>
-                            </li>
-                            <li>
-                                <a href="#expertise">expertise</a>
-                            </li>
-                            <li>
-                                <a href="#ourTeam">teams</a>
-                            </li>
-                            <li>
-                                <a href="#ourWorks">works</a>
-                            </li>
-                            <li>
-                                <a href="#peoplesQuotes">people say</a>
-                            </li>
-                            <li>
-                                <a href="#contactUs">contact</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="topnav" id="tajamTopnav">
+                        <a href="#" class="active">Tajam</a>
+                        <a href="#" class="highlight">HOME</a>
+                        <a href="#story">ABOUT</a>
+                        <a href="#expertise">EXPERTISE</a>
+                        <a href="#ourTeam">TEAMS</a>
+                        <a href="#ourWorks">WORKS</a>
+                        <a href="#peoplesQuotes">PEOPLE SAY</a>
+                        <a href="#contactUs">CONTACT</a>
+                        <a href="javascript:void(0);" class="icon" onclick="dropDownMenu()">&#9776;</a>
+                    </div>
+
                 </div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div id="myCarousel" class="carousel slide wow bounceIn" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -128,13 +116,13 @@
             </div>
         </div>
     </header>
-    <div id="story">
+    <section id="story">
         <div class="container">
             <div class="row">
-                <div class="bigLogo col-md-4">
+                <div class="bigLogo col-md-4 wow slideInLeft">
                     <img src="img/bigLogo.png" alt="Logo">
                 </div>
-                <div class="ourStory-info col-md-7">
+                <div class="ourStory-info col-md-7 wow slideInRight">
                     <h2>OUR STORY</h2>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
                         lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio
@@ -146,7 +134,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="video">
         <div class="fullscreen-video-wrap">
@@ -165,34 +153,34 @@
             </div>
             <div class="row">
                 <div class="expertiseBlock col-md-4 botoomBorder">
-                    <img src="img/designExpertise.svg" alt="">
+                    <img src="img/expertise/designExpertise.png" alt="" class="wow swing">
                     <h4>WEB DESIGN & DEVELOPMENT</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 botoomBorder">
-                    <img src="img/brandingIdentity.svg" alt="">
+                    <img src="img/expertise/brandingIdentity.png" alt="" class="wow swing">
                     <h4>BRANDING IDENTITY</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 botoomBorder">
-                    <img src="img/mobileIdentity.svg" alt="">
+                    <img src="img/expertise/mobileIdentity.png" alt="" class="wow swing">
                     <h4>MOBILE APP</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="expertiseBlock col-md-4 noBotoomBorder">
-                    <img src="img/optimization.svg" alt="">
+                    <img src="img/expertise/optimization.png" alt="" class="wow swing">
                     <h4>SEARCH ENGINE OPTIMIZATION</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 noBotoomBorder">
-                    <img src="img/gameDevelopment.svg" alt="">
+                    <img src="img/expertise/gameDevelopment.png" alt="" class="wow swing">
                     <h4>GAME DEVELOPMENT</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
                 <div class="expertiseBlock col-md-4 noBotoomBorder">
-                    <img src="img/withLove.svg" alt="">
+                    <img src="img/expertise/withLove.png" alt="" class="wow swing">
                     <h4>MADE WITH LOVE</h4>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                 </div>
@@ -209,29 +197,29 @@
                 <span class="line"></span>
             </div>
             <div class="row">
-                <figure class="teamMember col-md-3">
-                    <img src="img/teamMember.png" alt="">
+                <figure class="teamMember col-md-3 wow rollIn">
+                    <img src="img/team-members/teamMember.png" alt="">
                     <figcaption>
                         <h4>SEMF UCUK</h4>
                         <p>CEO & FOUNDER</p>
                     </figcaption>
                 </figure>
-                <figure class="teamMember col-md-3">
-                    <img src="img/teamMember.png" alt="">
+                <figure class="teamMember col-md-3  wow rollIn">
+                    <img src="img/team-members/teamMember.png" alt="">
                     <figcaption>
                         <h4>DIK ADALIN</h4>
                         <p>ENGINEERING</p>
                     </figcaption>
                 </figure>
-                <figure class="teamMember col-md-3">
-                    <img src="img/teamMember.png" alt="">
+                <figure class="teamMember col-md-3  wow rollIn">
+                    <img src="img/team-members/teamMember.png" alt="">
                     <figcaption>
                         <h4>JENG KOL</h4>
                         <p>DESIGNER</p>
                     </figcaption>
                 </figure>
-                <figure class="teamMember col-md-3">
-                    <img src="img/teamMember.png" alt="">
+                <figure class="teamMember col-md-3  wow rollIn">
+                    <img src="img/team-members/teamMember.png" alt="">
                     <figcaption>
                         <h4>PET ROMAK</h4>
                         <p>MARKETING</p>
@@ -247,28 +235,28 @@
         <div class="container">
             <div class="row  titleOurWorks">
                 <h2 class="col-md-6 justify-content-start">OUR WORKS</h2>
-                <a href="#" class="col-md-6 justify-content-end">
+                <a href="#" class="col-md-6 justify-content-center justify-content-md-end">
                     <p>See all projects in dribble ></p>
                 </a>
             </div>
         </div>
         <div class="projects">
             <div class="container">
-                <div class="row">
-                    <img src="img/ourWorks1.png" alt="proj1">
-                    <img src="img/ourWorks2.png" alt="proj1">
-                    <img src="img/ourWorks1.png" alt="proj1">
-                    <img src="img/ourWorks2.png" alt="proj1">
-                    <img src="img/ourWorks1.png" alt="proj1">
-                    <img src="img/ourWorks2.png" alt="proj1">
+                <div class="row flex-wrap">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks1.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks2.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks1.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks2.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks1.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks2.png" alt="proj1">
                 </div>
                 <div class="row">
-                    <img src="img/ourWorks2.png" alt="proj1">
-                    <img src="img/ourWorks1.png" alt="proj1">
-                    <img src="img/ourWorks2.png" alt="proj1">
-                    <img src="img/ourWorks1.png" alt="proj1">
-                    <img src="img/ourWorks2.png" alt="proj1">
-                    <img src="img/ourWorks1.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks2.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks1.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks2.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks1.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks2.png" alt="proj1">
+                    <img class="col-md-2 col-12" src="img/our-works/ourWorks1.png" alt="proj1">
                 </div>
             </div>
 
@@ -278,7 +266,7 @@
 
     <section id="peoplesQuotes">
         <span class="quoteSign">&#8220;</span>
-        <div id="quotesCarousel" class="carousel slide" data-ride="carousel">
+        <div id="quotesCarousel" class="carousel slide wow bounceIn" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#quotesCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#quotesCarousel" data-slide-to="1"></li>
@@ -381,8 +369,8 @@
 
     <section id="contactUs">
         <div class="container">
-            <div class="row">
-                <div class="contactForm col-md-6">
+            <div class="row flex-wrap wow fadeIn" data-wow-duration="3s">
+                <div class="contactForm col-12 col-md-6">
                     <h2>GIVE US A GOOD NEWS</h2>
                     <form action="#">
                         <input type="text" name="Name" placeholder="Name">
@@ -392,38 +380,38 @@
                         <button type="submit">SUBMIT</button>
                     </form>
                 </div>
-                <div class="ourClients col-md-6">
+                <div class="ourClients col-12 col-md-6">
                     <h2>OUR HAPPY CLIENT</h2>
-                    <div class="row">
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/zaraLogo.png" alt="">
+                    <div class="row flex-wrap">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/zaraLogo.png" alt="Zara">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/barneysNewYorkLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/barneysNewYorkLogo.png" alt="BarneysNewYork">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/calvinkleinLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/calvinkleinLogo.png" alt="CalvinKlein">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/converseLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/converseLogo.png" alt="Converse">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/levisLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/levisLogo.png" alt="Levis">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/mangoLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/mangoLogo.png" alt="Mango">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/gucciLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/gucciLogo.png" alt="Gucci">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/nikeLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/nikeLogo.png" alt="Mike">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/pumaLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/pumaLogo.png" alt="Puma">
                         </div>
-                        <div class="col-md-6 clientLogo">
-                            <img src="img/billabongLogo.png" alt="">
+                        <div class="col-6 clientLogo">
+                            <img src="img/clients/billabongLogo.png" alt="BillaBong">
                         </div>
                     </div>
                 </div>
@@ -433,7 +421,7 @@
 
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row wow fadeInDown">
                 <div class="col-md-4">
                     <div class="logo">
                         <img src="img/Vector Smart Object.png" alt="tajam logo">
@@ -457,24 +445,38 @@
                     <h4>STAY IN TOUCH</h4>
                     <div class="subsToNews">
                         <input type="email" placeholder="Subscribe our newsletter">
-                        <a href="#"><img src="img/socials/paperLogo.png" alt=""></a>
+                        <a href="#">
+                            <img src="img/socials/paperLogo.png" alt="Subscribe">
+                        </a>
                     </div>
                     <div class="ourSocial">
-                        <a href=""><img src="img/socials/facebookLogo.png" alt=""></a>
-                        <a href=""><img src="img/socials/twitterLogo.png" alt=""></a>
-                        <a href=""><img src="img/socials/dribbbleLogo.png" alt=""></a>
-                        <a href=""><img src="img/socials/instagramLogo.png" alt=""></a>
-                        <a href=""><img src="img/socials/googleLogo.png" alt=""></a>
-                        <a href=""><img src="img/socials/youtubeLogo.png" alt=""></a>
+                        <a href="">
+                            <img src="img/socials/facebookLogo.png" alt="Facebook">
+                        </a>
+                        <a href="">
+                            <img src="img/socials/twitterLogo.png" alt="Twitter">
+                        </a>
+                        <a href="">
+                            <img src="img/socials/dribbbleLogo.png" alt="Dribble">
+                        </a>
+                        <a href="">
+                            <img src="img/socials/instagramLogo.png" alt="Instagram">
+                        </a>
+                        <a href="">
+                            <img src="img/socials/googleLogo.png" alt="Google">
+                        </a>
+                        <a href="">
+                            <img src="img/socials/youtubeLogo.png" alt="YouTube">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row wow fadeInUp">
                 <div class="terms col-md-6 justify-content-end">
                     <ul>
-                        <li>HELP</li>
-                        <li>TERMS & CONDITION</li>
-                        <li>PRIVACY</li>
+                        <li><a href="#">HELP</a></li>
+                        <li><a href="#">TERMS & CONDITION</a></li>
+                        <li><a href="#">PRIVACY</a></li>
                     </ul>
                 </div>
                 <div class="copyright col-md-6">
@@ -484,6 +486,10 @@
         </div>
     </footer>
     <script src="js/scripts.min.js"></script>
+    <script src="libs/wow/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

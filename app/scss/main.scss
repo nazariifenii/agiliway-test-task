@@ -26,6 +26,7 @@ $font-colour:rgb(65, 61, 75);
     border: 1px solid $aqua-colour;
     font-family: 'Hammersmith One', sans-serif;
     border-radius: 3px;
+    font-size: 16px;
 }
 
 @mixin elements-colour($el-colour) {
@@ -34,8 +35,7 @@ $font-colour:rgb(65, 61, 75);
     h3,
     h4,
     h5,
-    h6
-    ul,
+    h6 ul,
     li,
     p {
         color: $el-colour;
@@ -44,6 +44,8 @@ $font-colour:rgb(65, 61, 75);
 
 @mixin background($url) {
     background: linear-gradient(to right, rgba(9, 5, 47, .85), rgba(49, 29, 94, .85)), url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @mixin h1 {
@@ -117,25 +119,44 @@ header {
     @include background("../img/header-background.png");
     .navigation {
         padding: 15px 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
         .logo {
             width: 30%;
             float: left;
-        } // nav {
-        //     float: right;
-        //     text-transform: uppercase;
-        //     font-size: 13px;
-        //     font-weight: $fnt-wght-black;
-        // }
-        ul {
-            width: 100%;
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        }
+        
+    }
+    .topnav {
+        width: 60%;
+        padding: 0 0 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+        & .active {
+            display: none;
+        }
+        & a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.5s ease-in-out all;
+            font-size: 10pt;
+            padding: 5px 12px;
+        }
+        & a:hover {
+            color: $aqua-colour;
+        }
+        & .highlight {
+            color: $aqua-colour;
+        }
+        .active {
+            color: white;
+        }
+        & .icon {
+            display: none;
         }
     }
     .carousel {
@@ -155,6 +176,11 @@ header {
             a {
                 margin: 50px auto 200px;
                 @include button;
+                text-decoration: none;
+                &:hover {
+                    background-color: #fff;
+                    color: $aqua-colour;
+                }
             }
         }
     }
@@ -173,6 +199,11 @@ header {
         }
         a {
             @include button;
+            text-decoration: none;
+            &:hover {
+                background-color: $aqua-colour;
+                color: #fff;
+            }
         }
     }
     @include elements-colour($font-colour);
@@ -201,7 +232,6 @@ header {
         border-right: 1px solid $font-colour;
         img {
             height: 50px;
-            width: 50px;
             margin: 30px 0;
         }
         p {
@@ -261,6 +291,11 @@ header {
         @include button;
         margin: 0 auto;
         margin-top: 30px;
+        text-decoration: none;
+        &:hover {
+            background-color:#fff;
+            color:$aqua-colour ;
+        }
     }
     @include elements-colour(#fff);
 }
@@ -282,7 +317,7 @@ header {
             .row {
                 width: 100%;
                 img {
-                    width: calc(100%/6);
+                    padding: 0;
                 }
             }
         }
@@ -290,6 +325,11 @@ header {
     .button {
         @include button;
         margin: 70px auto 0;
+        text-decoration: none;
+        &:hover {
+            background-color: $aqua-colour;
+            color: #fff;
+        }
     }
     @include elements-colour($font-colour);
 }
@@ -350,6 +390,11 @@ header {
             @include button();
             background-color: #fff;
             margin-bottom: 70px;
+            text-decoration: none;
+            &:hover {
+                background-color:  $aqua-colour;
+                color: #fff;
+            }
         }
     }
     .ourClients {
@@ -358,6 +403,7 @@ header {
             display: flex;
             align-items: flex-start;
         }
+       
     }
 }
 
@@ -410,6 +456,7 @@ footer {
             padding: 10px;
             background: transparent;
             border: 1px solid #fff;
+            color: #fff;
         }
         a {
             display: flex;
@@ -436,6 +483,9 @@ footer {
             img {
                 height: 50%;
             }
+            &:hover {
+                background-color:  $aqua-colour;
+            }
         }
     }
     .terms {
@@ -448,6 +498,13 @@ footer {
                 @include h4;
                 list-style-type: none;
                 margin-right: 30px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover {
+                        color:  $aqua-colour;
+                    }
+                }
             }
         }
     }

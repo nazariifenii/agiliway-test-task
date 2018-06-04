@@ -42,7 +42,7 @@ gulp.task('common-js', () => {
 //Concat of minimize .js files
 gulp.task('js', ['common-js'], () => {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/jquery/dist/jquery.min.js',
 		'app/js/common.min.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
